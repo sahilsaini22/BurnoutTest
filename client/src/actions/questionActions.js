@@ -1,4 +1,4 @@
-import {GET_QUESTIONS, NEXT, SCORE, COUNTS} from './types';
+import {GET_QUESTIONS, NEXT, SCORE, CANCEL, COUNTS} from './types';
 import axios from 'axios';
 
 export const getQuestions = () => dispatch =>{    
@@ -28,6 +28,13 @@ export const score = (score)=> dispatch =>  {
 export const getcounts =()=>{
     return({
         type: COUNTS         
+        
+    })  
+}; 
+
+export const cancel =()=>{
+    return({
+        type: CANCEL         
         
     })  
 }; 

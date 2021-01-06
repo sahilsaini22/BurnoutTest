@@ -42,10 +42,12 @@ class Quest extends Component{
  
 
     render(){
-        let {questions, current}= this.props.question;
+        let {questions, current, total}= this.props.question;
 
         const quest = 
-            questions.filter(x => x.qqid === current)
+            current > total ?
+            questions.filter(x => x.qqid === total)
+            : questions.filter(x => x.qqid === current)
         
 
         return(

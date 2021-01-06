@@ -1,13 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
+import {BrowserRouter, Route,  Switch} from 'react-router-dom'; 
 import App from './App';
+import Start from './Start';
+import End from './End';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
+  <BrowserRouter>
+  <Switch>
+        <Route path="/test" component={App} />                      
+        <Route path="/finish" component={End} /> 
+        <Route path="/" component={Start} />
+        
+  </Switch>
+  </BrowserRouter>,
+    
   
-    <App />
-  ,
   document.getElementById('root')
 );
 

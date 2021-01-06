@@ -1,10 +1,10 @@
 
-import {GET_QUESTIONS, NEXT, SCORE , COUNTS} from '../actions/types';
+import {GET_QUESTIONS, NEXT, SCORE ,CANCEL,  COUNTS} from '../actions/types';
 const initialState={    
         questions:[],
         current: 1, 
         score  : 0, 
-        total : 2
+        total : 4
 };
 
 const init = function (state=initialState, action){
@@ -32,6 +32,13 @@ const init = function (state=initialState, action){
         case COUNTS:
         return {
             ...state            
+        };
+
+        case CANCEL:
+        return {
+            ...state, 
+            current: 1,
+            score: 0         
         };
 
         default: return state;

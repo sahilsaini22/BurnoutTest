@@ -9,3 +9,4 @@ export const GET_ANSWERS = 'GET_ANSWERS';
 export const NEXT = 'NEXT';
 export const SCORE = 'SCORE';
 export const COUNTS = 'COUNTS';
+export const CANCEL = 'CANCEL';

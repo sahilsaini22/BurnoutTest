@@ -35,8 +35,11 @@ class Prog extends Component{
     render(){
         let { current, total }= this.props.question;
 
-        
-
+        current = 
+            current > total ?
+            total :
+            current
+            
         return(
             <Container >
                 
@@ -45,10 +48,12 @@ class Prog extends Component{
                     <TransitionGroup className='plant-group'>
                     
                             <CSSTransition key={current} timeout={0} classNames="fade" >                                  
+                                  
                                 <ListGroupItem style={{color:"dee7f1"}}>                                     
                                     <div className="text-center">{current} of {total}</div>
                                     <Progress value={current} max={total} />
-                                </ListGroupItem>
+                                </ListGroupItem> 
+                
                             </CSSTransition>
                     
                       
